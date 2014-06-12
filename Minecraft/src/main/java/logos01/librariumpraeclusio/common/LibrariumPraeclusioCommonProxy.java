@@ -1,4 +1,4 @@
-package com.logos01.librariumpraeclusio;
+package logos01.librariumpraeclusio.common;
 
 
 import net.minecraft.block.Block;

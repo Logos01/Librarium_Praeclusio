@@ -1,4 +1,4 @@
-package com.logos01.librariumpraeclusio;
+package logos01.librariumpraeclusio.common;
 
 import net.minecraft.block.Block;
 
@@ -14,7 +14,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.common.network.NetworkMod.SidedPacketHandler;
 import cpw.mods.fml.common.SidedProxy;
-import com.logos01.librariumpraeclusio.LibrariumPraeclusioCommonProxy;
 
 @Mod(modid = LibrariumPraeclusio.MODID, version = LibrariumPraeclusio.VERSION)
 
@@ -31,7 +30,7 @@ public class LibrariumPraeclusio
     @Instance("LibrariumPraeclusio")
     public static LibrariumPraeclusio instance = new LibrariumPraeclusio();
 
-    @SidedProxy(clientSide = "com.logos01.librariumpraeclusio.client.LibrariumPraeclusioClientProxy", serverSide = "com.logos01.librariumpraeclusio.LibrariumPraeclusioCommonProxy") //Tells Forge the location of your proxies
+    @SidedProxy(clientSide = "logos01.librariumpraeclusio.client.LibrariumPraeclusioClientProxy", serverSide = "com.logos01.librariumpraeclusio.LibrariumPraeclusioCommonProxy") //Tells Forge the location of your proxies
     public static LibrariumPraeclusioCommonProxy proxy;
 
     @PreInit
