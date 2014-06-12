@@ -33,7 +33,11 @@ public class LibrariumPraeclusioCommonProxy implements IGuiHandler{
 	}	
 
 	public void registerBlocks(){ 
-		//For registering Blocks
+		//Shelf
+		GameRegistry.registerBlock(LibrariumPraeclusio.Shelf, "Shelf");//Needed for all blocks
+		LanguageRegistry.addName(LibrariumPraeclusio.Shelf, "Shelf");//In-game name
+
+		
 	}
 
 	public void registerItems(){ 

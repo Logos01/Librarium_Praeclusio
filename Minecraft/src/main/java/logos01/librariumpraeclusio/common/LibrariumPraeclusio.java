@@ -14,6 +14,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.common.network.NetworkMod.SidedPacketHandler;
 import cpw.mods.fml.common.SidedProxy;
+import logos01.librariumpraeclusio.common.blocks.BlockShelf;
+import logos01.librariumpraeclusio.common.handlers.LibrariumPraeclusioServerPacketHandler;
+import logos01.librariumpraeclusio.common.handlers.LibrariumPraeclusioClientPacketHandler;
 
 @Mod(modid = LibrariumPraeclusio.MODID, version = LibrariumPraeclusio.VERSION)
 
@@ -30,17 +33,25 @@ public class LibrariumPraeclusio
     @Instance("LibrariumPraeclusio")
     public static LibrariumPraeclusio instance = new LibrariumPraeclusio();
 
-    @SidedProxy(clientSide = "logos01.librariumpraeclusio.client.LibrariumPraeclusioClientProxy", serverSide = "com.logos01.librariumpraeclusio.LibrariumPraeclusioCommonProxy") //Tells Forge the location of your proxies
+    @SidedProxy(clientSide = "logos01.librariumpraeclusio.client.LibrariumPraeclusioClientProxy", serverSide = "logos01.librariumpraeclusio.common.LibrariumPraeclusioCommonProxy") //Tells Forge the location of your proxies
     public static LibrariumPraeclusioCommonProxy proxy;
 
+    //Blocks
+    public static Block Shelf;
+    
+    
     @PreInit
     public void PreInit(FMLPreInitializationEvent e){
-
+    	Shelf = new BlockShelf(3000).setUnlocalizedName("Shelf");
+    	
     }
     
     @Init
-    public void InitLibrariumPraeclusio(FMLInitializationEvent event)
-    {
+    public void InitLibrariumPraeclusio(FMLInitializationEvent event){
+    	
+    	//BLOCKS (METHOD)
+    	proxy.registerBlocks(); 
+    	
     	//MULTIPLAYER ABILITY
     	NetworkRegistry.instance().registerGuiHandler(this, proxy); //Registers the class that deals with GUI data
 
