@@ -1,0 +1,16 @@
+[
+{
+  "modid": "librariumpraeclusio",
+  "name": "Librarium_Praeclusio",
+  "description": "Storage solution for the arcane-minded.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["Logos01"],
+  "credits": "--",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
