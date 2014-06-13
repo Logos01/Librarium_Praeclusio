@@ -43,6 +43,7 @@ public class LibrariumPraeclusio
     @PreInit
     public void PreInit(FMLPreInitializationEvent e){
     	Shelf = new BlockShelf(3000).setUnlocalizedName("Shelf");
+    	Phylactery = new BlockPhylactery(3001).setUnlocalizedName("Phylactery");
     	
     }
     

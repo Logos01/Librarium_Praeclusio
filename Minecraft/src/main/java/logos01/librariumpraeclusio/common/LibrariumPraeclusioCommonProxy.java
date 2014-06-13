@@ -35,7 +35,21 @@ public class LibrariumPraeclusioCommonProxy implements IGuiHandler{
 	public void registerBlocks(){ 
 		//Shelf
 		GameRegistry.registerBlock(LibrariumPraeclusio.Shelf, "Shelf");//Needed for all blocks
+		GameRegistry.addRecipe(
+				new ItemStack(LibrariumPraeclusio.Shelf), "MMM", " A ", "MMM",
+				Character.valueOf('M'), Block.wood, 
+				Character.valueOf('A'), Item.stick
+			);
 		LanguageRegistry.addName(LibrariumPraeclusio.Shelf, "Shelf");//In-game name
+		
+		//Phylactery
+		GameRegistry.registerBlock(LibrariumPraeclusio.Phylactery, "Phylactery");
+		GameRegistry.addRecipe(
+				new ItemStack(LibrariumPraeclusio.Phylactery), " M ", "MAM", " M ",
+				Character.valueOf('M'), Block.glasspane,
+				Character.valueOf('A'), Block.glass
+			);
+		LanguageRegistry.addName(LibrariumPraeclusio.Phylactery, "Phylactery");
 
 		
 	}
